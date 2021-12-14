@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-
+const { ESBuildMinifyPlugin } = require("esbuild-loader");
 
 const port = 3000;
 // const port = 8000;
@@ -24,17 +24,18 @@ module.exports = {
             'react-dom': '@hot-loader/react-dom',
             '@Actions': __dirname + '/src/redux/actions',
             '@Vars': __dirname + '/src/assets/css/vars.scss',
-            'Pages': __dirname + '/src/components/pages',
-            'Atoms': __dirname + '/src/components/UI/atoms',
-            'Molecules': __dirname + '/src/components/UI/molecules',
-            'Organisms': __dirname + '/src/components/UI/organisms',
-            'Hoc': __dirname + '/src/components/HOC',
-            'Utils': __dirname + '/src/utils',
+            '@Pages': __dirname + '/src/components/pages',
+            '@Atoms': __dirname + '/src/components/UI/atoms',
+            '@Molecules': __dirname + '/src/components/UI/molecules',
+            '@Organisms': __dirname + '/src/components/UI/organisms',
+            '@Hoc': __dirname + '/src/components/HOC',
+            '@Utils': __dirname + '/src/utils',
         },
         extensions: ['.ts', '.js', '.jsx', '.tsx', '.scss'],
     },
     module: {
-        rules: [{ // BABEL & TS LOADER
+        rules: [
+            { // BABEL & TS LOADER
                 test: /\.(ts|tsx|js|jsx)$/,
                 use: [
                     'babel-loader',

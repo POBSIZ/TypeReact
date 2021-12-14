@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve",
-    "wp-build": "webpack",
-    "ts-build": "tsc",
-    "build": "tsc",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -51,6 +49,8 @@
     "babel-preset-es2020": "^1.0.2",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^5.2.6",
+    "esbuild": "^0.14.4",
+    "esbuild-loader": "^2.17.0",
     "file-loader": "^6.2.0",
     "fork-ts-checker-webpack-plugin": "^6.2.10",
     "html-webpack-plugin": "^5.3.1",

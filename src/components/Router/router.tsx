@@ -13,7 +13,7 @@ const MainRouter: React.FC<any> = () => {
     <main className="main">
       <Routes>
         
-        <Route path="/" element={<Home/>} />
+        <Route path="/*" element={<Home/>} />
 
       </Routes>
     </main>             
