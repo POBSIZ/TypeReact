@@ -24,6 +24,11 @@
       "@Utils": ["/src/utils"]
     },
     "noImplicitAny": false,
+    "noResolve": false,
+    "removeComments": false,
+    "sourceMap": true,
+    "allowJs": true,
+    "keyofStringsOnly": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -39,6 +44,7 @@
     "emitDeclarationOnly": true,
     "declaration": true
   },
+  "typeRoots": ["node_modules/@types", "src/@type", "src/types"],
   "include": [
     "src",
     "src/**/*"
